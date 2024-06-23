@@ -1,0 +1,7 @@
+CREATE TABLE address(
+id UUID DEFAULT gen_random_wid()PRIMARY KEY,
+city VARCHAR(100) NOT NULL,
+UF VARCHAR(100) NOT NULL,
+event_id UUID,
+FOREIGN KEY(event_id) REFERENCES event(id) ON DELETE CASCADE
+);
